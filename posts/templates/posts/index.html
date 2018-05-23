@@ -1,0 +1,28 @@
+{% load static %}
+<html lang="en">
+<head>
+  <title>Sports News</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h5><a href="/posts/key">Submit your key here</a></h5>
+  <h2>Top Sports News</h2>
+  <ul class="list-group">
+    {% for c in news %}
+    <li class="list-group-item">{{ c.title }}</li>
+    <p>{{e.description}}</p>
+    {% endfor %}
+  </ul>
+</div>
+
+</body>
+<script>
+    console.log('{{news}}')
+</script>
+</html>
