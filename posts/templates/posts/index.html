@@ -12,17 +12,14 @@
 
 <div class="container">
     <h5><a href="/posts/key">Submit your key here</a></h5>
-  <h2>Top Sports News</h2>
+  <h1 style="text-align:center">Top Sports News</h1>
   <ul class="list-group">
     {% for c in news %}
-    <li class="list-group-item">{{ c.title }}</li>
-    <p>{{e.description}}</p>
+    <b>{{ c.title }}</b><br>
+    <li class="list-group-item">{{ c.description }}</li><br>
     {% endfor %}
   </ul>
 </div>
 
 </body>
-<script>
-    console.log('{{news}}')
-</script>
 </html>
