@@ -13,12 +13,12 @@
 <div class="container">
         <h5><a href="/">Home</a></h5>
   <h2>Enter Your Key here</h2>
-  <form>
+  <form method="POST" action="{% url 'key' %}">
+    {% csrf_token %}
     <div class="form-group">
-      <label for="usr">Key:</label>
-      <input type="text" class="form-control" id="key">
+      {{ form.key}}
     </div>
-    <button type="button" class="btn btn-success">Submit</button>
+    <input type="submit" class="btn btn-success" value="Submit">
   </form>
 </div>
 
