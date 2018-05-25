@@ -4,14 +4,9 @@ from django.http import JsonResponse
 from posts.models import News, Key
 from posts import api
 
-def index(request):
-    return HttpResponse('Hello World')
 
-def test(request):
-    return HttpResponse('<h1><i>this  is test</i></h1>')
-
-def news1(request):
-    api.get_data(request)
+def news(request):
+    testtt = api.get_data(request)
     context = {
         'news': News.objects.order_by('-date_added')[:10]
     }

@@ -19,4 +19,4 @@ def get_data(request):
                         print("New object Created")
                 else:
                         print("objects not Created")
-                return created
+                return rate_list['articles']
